@@ -4,6 +4,9 @@
 *.obj
 *.elf
 
+# HojaActual
+HojaTrabajo04.pdf
+
 # Precompiled Headers
 *.gch
 *.pch

@@ -1,4 +1,10 @@
-public interface Stack<E> 
+/**
+ * Interfaz general de Stack
+ * @author Douglas Barrios
+ * @since 14/08/2016
+ * @version 1.0
+ */
+public interface Stack<E>
 {
 
    public void push(E item);

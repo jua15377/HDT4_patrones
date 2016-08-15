@@ -1,5 +1,12 @@
 import java.util.ArrayList;
 
+/**
+ * Implementacion de la interfaz Stack en forma de arrayList
+ * @author Douglas Barrios
+ * @since 14/08/2016
+ * @version 1.0
+ */
+
 public class StackArrayList<E>
  implements Stack<E>
 {

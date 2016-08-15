@@ -1,21 +1,30 @@
 /**
- * Esta clase
+ * Esta clase realiza las operaciones postfix deseadas por el usuario, implementando
+ *  el tipo de memoria indicada en el main. Ademas, utiliza el patron de diseno 'Singleton'
+ *  para asegurar que solo se instancie una vez.
  * @author Eric Mendoza 15002
  * @author Jonnathan Juarez 15377
- * @since 21/07/2016
- * @version 1.0
+ * @since 14/08/2016
+ * @version 2.0
  */
-public class Calculadora {
-    private Stack<Integer> memoria;
-    private boolean operando;
+public class CalculadoraP {
+    /**
+     * Se crea un objeto de si misma
+     */
+    private static CalculadoraP ourInstance = new CalculadoraP();
 
     /**
-     * Constructor de la calculadora.
-     *      Inicia con operando en falso e inicia el Stack
+     * Este metodo sirve para devolver siempre la misma instancia de la clase creada
+     * @return Devuelve la referencia hacia la clase instanciada
      */
-    public Calculadora(){
-        this.operando = false;
-        memoria = new StackVector<Integer>();
+    public static CalculadoraP getInstance() {
+        return ourInstance;
+    }
+
+    /**
+     * Constructor declarado privado para que no pueda ser instanciada
+     */
+    private CalculadoraP() {
     }
 
     /**
@@ -23,9 +32,10 @@ public class Calculadora {
      * @param expresion, contiene un String con la operacion que se quiere realizar
      * @return devuelve el resultado de la operacion matematica
      */
-    public int operar(String expresion){
+    public int operar(String expresion, String tipoMemoria){
+        Stack<Integer> memoria = new StackArrayList<Integer>();
+
         int n1, n2, resultado;
-        setOperando(true);
         for (int i = 0; i < expresion.length(); i=i+2) {
             try {
                 n1 = Integer.parseInt(String.valueOf(expresion.charAt(i)));  // Trata de convertir el texto a numero
@@ -47,7 +57,6 @@ public class Calculadora {
             }
         }
         resultado = memoria.pop();
-        setOperando(false);
         return resultado;
     }
 
@@ -91,9 +100,5 @@ public class Calculadora {
         return n1/n2;
     }
 
-
-    public void setOperando(boolean operando) {
-        this.operando = operando;
-    }
 
 }
