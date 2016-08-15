@@ -1,5 +1,5 @@
 /**
- * Interfaz general de Stack
+ * Interfaz de Stack
  * @author Douglas Barrios
  * @since 14/08/2016
  * @version 1.0
@@ -7,23 +7,23 @@
 public interface Stack<E>
 {
 
-   public void push(E item);
+   void push(E item);
    // pre: 
    // post: item is added to stack
    // will be popped next if no intervening push
    
-   public E pop();
+   E pop();
    // pre: stack is not empty
    // post: most recently pushed item is removed and returned
    
-   public E peek();
+   E peek();
    // pre: stack is not empty
    // post: top value (next to be popped) is returned
    
-   public boolean empty();
+   boolean empty();
    // post: returns true if and only if the stack is empty
    
-   public int size();
+   int size();
    // post: returns the number of elements in the stack
 
 }

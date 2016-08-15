@@ -1,3 +1,9 @@
+/**
+ * Es el elemento basico de una lista doblemente encadenada.
+ * @author Douglas Barrios
+ * @since 14/08/2016
+ * @version 1.0
+ */
 public class DoublyLinkedNode<E> {
     protected E data;
     protected DoublyLinkedNode<E> nextElement;

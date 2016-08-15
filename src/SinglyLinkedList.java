@@ -1,5 +1,10 @@
 import java.util.Iterator;
-
+/**
+ * Esta clase es una lista simplemente encadenada.
+ * @author Douglas Barrios
+ * @since 14/08/2016
+ * @version 1.0
+ */
 public class SinglyLinkedList<E> extends AbstractList<E> {
 
     protected int count; // list size

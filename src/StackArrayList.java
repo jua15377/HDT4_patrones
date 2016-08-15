@@ -7,9 +7,7 @@ import java.util.ArrayList;
  * @version 1.0
  */
 
-public class StackArrayList<E>
- implements Stack<E>
-{
+public class StackArrayList<E> extends AbstractStack<E> {
 	protected ArrayList<E> data;
 
 	/**

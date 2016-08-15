@@ -1,5 +1,5 @@
 /**
- * Es el elemento basico de una lista. Al unir varios nodos se crea una lista simple.
+ * Es el elemento basico de una lista simplemente encadenada.
  * @author Douglas Barrios
  * @since 14/08/2016
  * @version 1.0

@@ -1,5 +1,10 @@
 import java.util.Iterator;
-
+/**
+ * Esta clase es una lista doblemente encadenada.
+ * @author Douglas Barrios
+ * @since 14/08/2016
+ * @version 1.0
+ */
 public class DoublyLinkedList<E> extends AbstractList<E> {
     protected int count;
     protected DoublyLinkedNode<E> head;
